@@ -12,6 +12,7 @@ if (isset($_POST["cari"])) {
 
 <head>
     <title>Halaman User - Resep</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@ if (isset($_POST["cari"])) {
     </form>
 
     <br>
-    <a href="../auth/login.php">Masuk sebagai Admin</a>
+    <a href="../auth/login.php" class="top-right">Masuk sebagai Admin</a>
 
     <div id="container">
         <table border="1" cellpadding="10" cellspacing="0">

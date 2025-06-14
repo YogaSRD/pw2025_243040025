@@ -32,11 +32,13 @@ if (isset($_POST["submit"])) {
 
 <head>
     <title>Tambah Resep Makanan</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
     <h1>Tambah Resep Makanan</h1>
+    <a href="index.php" class="btn-kembali">Menu Utama</a>
     <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
@@ -79,6 +81,7 @@ if (isset($_POST["submit"])) {
             </li>
         </ul>
     </form>
+
 </body>
 
 </html>

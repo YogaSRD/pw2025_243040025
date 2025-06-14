@@ -1,0 +1,292 @@
+/*HALAMAN USER*/
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #f1eded;
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container tabel*/
+#container {
+  width: 90%;
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ffffff;
+  background-color: #1e1e1e;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+th {
+  background-color: #2c2c2c;
+}
+
+/* Form pencarian */
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Input pencarian */
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  width: 250px;
+}
+
+/* Tombol */
+button {
+  background-color: #888;
+  color: black;
+  border: none;
+  padding: 9px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+  color: cyan;
+}
+
+/* Tombol Masuk Admin */
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+  padding: 9px 16px;
+  background-color: #888;
+  color: black;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.top-right:hover {
+  background-color: #333;
+  color: cyan;
+}
+
+/* Heading judul halaman */
+h1 {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* HALAMAN LOGIN */
+.form-login {
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-login label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ddd;
+}
+
+.form-login input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-login button {
+  background-color: #888;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.form-login button:hover {
+  background-color: #333;
+  color: cyan;
+}
+
+.error-msg {
+  text-align: center;
+  color: red;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* HALAMAN ADMIN */
+/* Tombol Login / Logout */
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #999;
+  color: black;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.top-right:hover {
+  background-color: #666;
+  color: cyan;
+}
+
+/* Judul  */
+h1 {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* Tombol tambah resep */
+.bottom-right {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #999;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.bottom-right:hover {
+  background-color: #666;
+  color: cyan;
+}
+
+/* Tombol Aksi */
+.table-action {
+  text-decoration: none;
+  background-color: #999;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 2px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.table-action:hover {
+  background-color: #666;
+  color: cyan;
+}
+/*HALAMAN TAMBAH*/
+/* Tombol menu */
+.btn-kembali {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #999;
+  color: black;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-kembali:hover {
+  background-color: #666;
+  color: cyan;
+}
+
+/* Judul */
+h1 {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* Form Tambah */
+form {
+  width: 80%;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+}
+
+form ul {
+  list-style: none;
+}
+
+form li {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Tombol */
+button[type="submit"] {
+  background-color: #999;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #666;
+  color: cyan;
+}

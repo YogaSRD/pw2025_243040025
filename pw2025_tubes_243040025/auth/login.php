@@ -27,38 +27,34 @@ if (isset($_POST["login"])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Halaman Login</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
+    <a href="../user/index_user.php" class="top-right">← Kembali ke User</a>
+
     <h1>Halaman Login</h1>
 
     <?php if (isset($error)) : ?>
-        <p style="color: red; font-style: italic;">username / password salah</p>
+        <p class="error-msg">Username / Password salah</p>
     <?php endif; ?>
 
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="username">Username :</label>
-                <input type="text" name="username" id="username" required>
-            </li>
-            <li>
-                <label for="password">Password :</label>
-                <input type="password" name="password" id="password" required>
-            </li>
-            <li>
-                <button type="submit" name="login">Login</button>
-            </li>
-        </ul>
-    </form>
+    <form action="" method="post" class="form-login">
+        <label for="username">Username :</label>
+        <input type="text" name="username" id="username" required>
 
-    <p><a href="../user/index_user.php">Kembali ke Halaman User</a></p>
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="password" required>
+
+        <button type="submit" name="login">Login</button>
+    </form>
 
 </body>
 

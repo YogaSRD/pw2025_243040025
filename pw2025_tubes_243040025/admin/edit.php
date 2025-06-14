@@ -38,11 +38,14 @@ if (isset($_POST["submit"])) {
 
 <head>
     <title>Edit Resep Makanan</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
+
     <h1>Edit Resep Makanan</h1>
+    <a href="index.php" class="btn-kembali">Menu Utama</a>
     <form action="" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $mhs["id"]; ?>">
         <input type="hidden" name="gambarLama" value="<?= $mhs["gambar"]; ?>">

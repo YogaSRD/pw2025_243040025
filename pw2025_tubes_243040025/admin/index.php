@@ -22,16 +22,14 @@ if (isset($_POST["cari"])) {
 
 <head>
     <title>Halaman Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <a href="../auth/logout.php">Logout</a> <!-- path logout -->
-
+    <a href="../auth/logout.php" class="top-right">Logout</a>
     <h1>Daftar Resep Makanan</h1>
 
-    <a href="tambah.php">Tambah Resep Makanan</a>
-    <br><br>
 
     <form action="" method="post">
         <input type="text" name="keyword" size="30" autofocus placeholder="masukkan nama resep makanan..." autocomplete="off" id="keyword">
@@ -69,14 +67,17 @@ if (isset($_POST["cari"])) {
                     <td><?= $row["sumber"]; ?></td>
                     <td><?= $row["username"]; ?></td>
                     <td>
-                        <a href="edit.php?id=<?= $row["id"]; ?>">Edit</a>
-                        <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Apakah Kamu Yakin Ingin Menghapus Resep Ini?')">Hapus</a>
+                        <a href="edit.php?id=<?= $row["id"]; ?>" class="table-action">Edit</a>
+                        <a href="hapus.php?id=<?= $row["id"]; ?>" class="table-action" onclick="return confirm('Apakah Kamu Yakin Ingin Menghapus Resep Ini?')">Hapus</a>
                     </td>
                 </tr>
                 <?php $i++; ?>
             <?php endforeach; ?>
         </table>
     </div>
+
+    <a href="tambah.php" class="bottom-right">Tambah Resep Makanan</a>
+
 
     <script src="../js/script.js"></script>
 
