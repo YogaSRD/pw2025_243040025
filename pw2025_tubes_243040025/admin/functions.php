@@ -16,6 +16,10 @@ function query($query)
 function tambah($data)
 {
     global $conn;
+
+    // Ambil user_id dari session login
+    $user_id = $_SESSION["user_id"];
+
     $nama_makanan = htmlspecialchars($data["nama_makanan"]);
     $level_pedas = htmlspecialchars($data["level_pedas"]);
     $waktu_memasak = htmlspecialchars($data["waktu_memasak"]);
@@ -23,16 +27,17 @@ function tambah($data)
     $langkah_memasak = htmlspecialchars($data["langkah_memasak"]);
     $sumber = htmlspecialchars($data["sumber"]);
 
-    // upload gambar
+    // Upload gambar
     $gambar = upload();
     if (!$gambar) {
         return false;
     }
 
+    // Masukkan data ke database beserta user_id
     $query = "INSERT INTO makanan 
-        (nama_makanan, level_pedas, waktu_memasak, bahan, langkah_memasak, gambar, sumber)
+        (nama_makanan, level_pedas, waktu_memasak, bahan, langkah_memasak, gambar, sumber, user_id)
         VALUES 
-        ('$nama_makanan', '$level_pedas', '$waktu_memasak', '$bahan', '$langkah_memasak', '$gambar', '$sumber')";
+        ('$nama_makanan', '$level_pedas', '$waktu_memasak', '$bahan', '$langkah_memasak', '$gambar', '$sumber', '$user_id')";
 
     mysqli_query($conn, $query);
 

@@ -6,7 +6,7 @@ if (!isset($_SESSION["login"])) {
     exit;
 }
 
-require '../functions.php'; // Ganti jika functions ada di luar folder admin
+require 'functions.php'; // Ganti jika functions ada di luar folder admin
 
 if (isset($_POST["submit"])) {
 

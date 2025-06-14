@@ -7,7 +7,10 @@ if (!isset($_SESSION["login"])) {
 }
 
 require 'functions.php';
-$makanan = query("SELECT * FROM makanan");
+//$makanan = query("SELECT * FROM makanan");
+$makanan = query("SELECT makanan.*, user.username 
+                  FROM makanan 
+                  LEFT JOIN user ON makanan.user_id = user.id");
 
 if (isset($_POST["cari"])) {
     $makanan = cari($_POST["keyword"]);
@@ -47,6 +50,7 @@ if (isset($_POST["cari"])) {
                 <th>Bahan</th>
                 <th>Langkah Memasak</th>
                 <th>Sumber</th>
+                <th>Di tambahkan user</th>
                 <th>Aksi</th>
             </tr>
 
@@ -63,6 +67,7 @@ if (isset($_POST["cari"])) {
                     <td><?= substr($row["bahan"], 0, 50); ?></td>
                     <td><?= substr($row["langkah_memasak"], 0, 70); ?></td>
                     <td><?= $row["sumber"]; ?></td>
+                    <td><?= $row["username"]; ?></td>
                     <td>
                         <a href="edit.php?id=<?= $row["id"]; ?>">Edit</a>
                         <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Apakah Kamu Yakin Ingin Menghapus Resep Ini?')">Hapus</a>
