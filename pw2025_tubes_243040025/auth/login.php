@@ -57,6 +57,8 @@ if (isset($_POST["login"])) {
         </ul>
     </form>
 
+    <p><a href="../user/index_user.php">Kembali ke Halaman User</a></p>
+
 </body>
 
 </html>
