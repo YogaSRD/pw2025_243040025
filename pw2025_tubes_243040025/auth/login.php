@@ -38,7 +38,7 @@ if (isset($_POST["login"])) {
 
 <body>
 
-    <a href="../user/index_user.php" class="top-right">← Kembali ke User</a>
+    <a href="../user/index_user.php" class="top-right">Kembali ke User</a>
 
     <h1>Halaman Login</h1>
 
@@ -54,6 +54,7 @@ if (isset($_POST["login"])) {
         <input type="password" name="password" id="password" required>
 
         <button type="submit" name="login">Login</button>
+        <p class="register-link">Belum pernah masuk? <a href="registrasi.php">Registrasi</a></p>
     </form>
 
 </body>
